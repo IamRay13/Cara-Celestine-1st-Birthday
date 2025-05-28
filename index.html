@@ -1,238 +1,153 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cara's 1st Birthday Celebration</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23FF69B4'%3E%F0%9F%A5%B3%3C/text%3E%3C/svg%3E" type="image/svg+xml">
-  <style>
-  body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffe4e1; /* Light pink background */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  color: #333;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cara's 1st Birthday Bash!</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23FF69B4'%3E%F0%9F%A5%B3%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+ <header>
+ <h1>Cara's 1st Birthday Bash! 🎉</h1>
+ </header>
 
-  header {
-  background-color: #ffb6c1; /* Slightly darker pink for header */
-  color: white;
-  text-align: center;
-  padding: 2em 0;
-  width: 100%;
-  }
+ <main>
+ <section class="invitation">
+ <h2>You're Invited!</h2>
+ <p class="animated-text">Celebrate with us as our little star, Cara Celestine Miñoza Tariao, turns one!</p>
+ <div class="details">
+ <p><i class="fa-solid fa-calendar-days"></i> <strong>Date:</strong> October 14, 2025</p>
+ <p><i class="fa-solid fa-clock"></i> <strong>Time:</strong> 1:00 PM</p>
+ <p><i class="fa-solid fa-location-dot"></i> <strong>Venue:</strong> <a href="https://www.google.com/maps/place/Shakey's+Panagdait/@10.321827,123.917289,17z/data=!3m1!4b1!4m6!3m5!1s0x3b3cc9b04139344d:0x85e829b32c11e103!8m2!3d10.321827!4d123.917289!16s%2Fg%2F12201m30" target="_blank" style="color: inherit; text-decoration: none;">Shakey's Panagdait, Cebu City <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+ <p><i class="fa-solid fa-envelope"></i> <strong>RSVP:</strong> <a href="mailto:rsvp@example.com" style="color: inherit; text-decoration: none;">rsvp@example.com</a> or call [Insert Contact Details]</p>
+ </div>
+ <div class="party-popper-container top-left">
+ <div class="party-popper"></div>
+ </div>
+ <div class="party-popper-container top-right">
+ <div class="party-popper"></div>
+ </div>
+ </section>
 
-  main {
-  padding: 2em;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  margin-bottom: 2em;
-  }
+ <section class="budget">
+ <h2 class="toggle-header">Expense Budget <i class="fa-solid fa-caret-down"></i></h2>
+ <div class="toggle-content">
+ <table class="expense-table">
+ <thead>
+ <tr>
+ <th>Item/Service</th>
+ <th>Details</th>
+ <th>Unit Cost (PHP)</th>
+ <th>Total Cost (PHP)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Venue Setup</td>
+ <td>Venue fee (no additional charge)</td>
+ <td>0</td>
+ <td>0</td>
+ </tr>
+ <tr>
+ <td>Birthday Cake</td>
+ <td>Custom cake for 30 pax</td>
+ <td>4,000</td>
+ <td>4,000</td>
+ </tr>
+ <tr>
+ <td>Catering (Food)</td>
+ <td>30 guests @ ₱250 each</td>
+ <td>250</td>
+ <td>7,500</td>
+ </tr>
+ <tr>
+ <td>Beverages</td>
+ <td>30 guests @ ₱50 each</td>
+ <td>50</td>
+ <td>1,500</td>
+ </tr>
+ <tr>
+ <td>Decorations</td>
+ <td>Balloons, banners, table decor</td>
+ <td>1 lot</td>
+ <td>2,500</td>
+ </tr>
+ <tr>
+ <td>Party Favors</td>
+ <td>Goodie bags for each guest (30 total)</td>
+ <td>100</td>
+ <td>3,000</td>
+ </tr>
+ <tr>
+ <td>Entertainment</td>
+ <td>Games, activities & fun interactive set-ups</td>
+ <td>2,000</td>
+ <td>2,000</td>
+ </tr>
+ <tr>
+ <td>Miscellaneous</td>
+ <td>Contingency/Unexpected expenses</td>
+ <td>-</td>
+ <td>1,000</td>
+ </tr>
+ </tbody>
+ <tfoot>
+ <tr>
+ <td colspan="3"><strong>Total</strong></td>
+ <td><strong>₱ 21,500</strong></td>
+ </tr>
+ </tfoot>
+ </table>
+ </div>
+ </section>
 
-  h1 {
-  color: #ff1493; /* Bright pink for heading */
-  }
+ <section class="itinerary">
+ <h2 class="toggle-header">Event Itinerary <i class="fa-solid fa-caret-down"></i></h2>
+ <div class="toggle-content">
+ <ul>
+ <li><i class="fa-solid fa-door-open"></i> <strong>1:00 PM:</strong> Arrival & Welcome: Guests arrive and enjoy some early fun.</li>
+ <li><i class="fa-solid fa-camera"></i> <strong>1:15 PM:</strong> Opening Remarks & Group Photo: Let's capture this moment!</li>
+ <li><i class="fa-solid fa-utensils"></i> <strong>1:30 PM:</strong> Meal Time (Lunch): Time to eat, relax, and chat.</li>
+ <li><i class="fa-solid fa-cake-candles"></i> <strong>2:00 PM:</strong> Cake Cutting Ceremony: Make a wish, Cara!</li>
+ <li><i class="fa-solid fa-gamepad"></i> <strong>2:15 PM:</strong> Fun & Games: Interactive games for everyone!</li>
+ <li><i class="fa-solid fa-music"></i> <strong>2:45 PM:</strong> Entertainment Break: Mini dance party, face painting, or a surprise!</li>
+ <li><i class="fa-solid fa-gift"></i> <strong>3:00 PM:</strong> Party Favors: A little thank you for celebrating with us.</li>
+ <li><i class="fa-solid fa-message"></i> <strong>3:15 PM:</strong> Closing Remarks: A heartfelt thank you.</li>
+ <li><i class="fa-solid fa-comments"></i> <strong>3:30 PM onwards:</strong> Continue Mingling: Let the good times roll!</li>
+ </ul>
+ </div>
+ </section>
 
-  section {
-  margin-bottom: 1.5em;
-  }
+ <section class="gallery">
+ <h2>Party Fun!</h2>
+ <div class="image-grid">
+ <img src="https://images.unsplash.com/photo-1594909194813-5f8ca8189b84?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Colorful Birthday Decorations">
+ <img src="https://images.unsplash.com/photo-1533174072536-7aa63921471b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Birthday Cake with Balloons">
+ <img src="https://images.unsplash.com/photo-1563784462988-41569fdf9d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kids Playing at a Party">
+ </div>
+ </section>
 
-  h2 {
-  color: #ff69b4; /* Medium pink for subheading */
-  border-bottom: 2px solid #ff69b4;
-  padding-bottom: 0.5em;
-  }
+ <div class="confetti-container">
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ <div class="confetti"></div>
+ </div>
+ </main>
 
-  ul {
-  list-style: none;
-  padding: 0;
-  }
+ <footer>
+ © 2025 Cara's 1st Birthday Celebration. Made with <i class="fa-solid fa-heart" style="color: #ff69b4;"></i> in Cebu City.
+ </footer>
+ </div>
 
-  li {
-  margin-bottom: 0.5em;
-  }
-
-  .expense-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1em;
-  }
-
-  .expense-table th, .expense-table td {
-  border: 1px solid #ff69b4;
-  padding: 0.5em;
-  text-align: left;
-  }
-
-  .expense-table th {
-  background-color: #ffb6c1;
-  color: white;
-  }
-
-  footer {
-  text-align: center;
-  padding: 1em 0;
-  background-color: #ffb6c1;
-  color: white;
-  width: 100%;
-  }
-
-  /* Party Popper Animation (Simplified - Consider adding a library for more complex animations) */
-  .party-popper {
-  position: relative;
-  width: 50px;
-  height: 70px;
-  margin: 20px auto;
-  }
-
-  .party-popper:before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  width: 10px;
-  height: 10px;
-  background-color: #ff69b4;
-  border-radius: 50%;
-  animation: confetti 1s infinite;
-  }
-
-  @keyframes confetti {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-50px) rotate(360deg); }
-  }
-
-  /* Image */
-  .birthday-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1em;
-  }
-  </style>
- </head>
- <body>
-  <header>
-  <h1>Cara's 1st Birthday Celebration</h1>
-  </header>
-
-  <main>
-  <section>
-  <h2>Invitation</h2>
-  <p>You're Invited to Cara's 1st Birthday Celebration!</p>
-  <p>Join us as we celebrate one whole year of joy, wonder, and precious memories with our daughter, Cara Celestine Miñoza Tariao.</p>
-  <p>Come share in the fun, games, and delightful treats of this special day!</p>
-  <ul>
-  <li><strong>Date:</strong> October 14, 2025</li>
-  <li><strong>Time:</strong> 1:00 PM</li>
-  <li><strong>Venue:</strong> Shakeys Panagdait</li>
-  <li><strong>RSVP:</strong> [Insert Contact Details]</li>
-  </ul>
-  </section>
-
-  <section>
-  <h2>Expense Budget (in PHP) for 30 Pax</h2>
-  <table class="expense-table">
-  <thead>
-  <tr>
-  <th>Item/Service</th>
-  <th>Quantity / Notes</th>
-  <th>Unit Cost (PHP)</th>
-  <th>Total Cost (PHP)</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td>Venue Setup</td>
-  <td>Venue fee (no additional charge)</td>
-  <td>0</td>
-  <td>0</td>
-  </tr>
-  <tr>
-  <td>Birthday Cake</td>
-  <td>Custom cake for 30 pax</td>
-  <td>4,000</td>
-  <td>4,000</td>
-  </tr>
-  <tr>
-  <td>Catering (Food)</td>
-  <td>30 guests @ 250 PHP each</td>
-  <td>250</td>
-  <td>7,500</td>
-  </tr>
-  <tr>
-  <td>Beverages</td>
-  <td>30 guests @ 50 PHP each</td>
-  <td>50</td>
-  <td>1,500</td>
-  </tr>
-  <tr>
-  <td>Decorations</td>
-  <td>Balloons, banners, table decor</td>
-  <td>1 lot</td>
-  <td>2,500</td>
-  </tr>
-  <tr>
-  <td>Party Favors</td>
-  <td>Goodie bags for each guest (30 total)</td>
-  <td>100</td>
-  <td>3,000</td>
-  </tr>
-  <tr>
-  <td>Entertainment</td>
-  <td>Games, activities & fun interactive set-ups</td>
-  <td>2,000</td>
-  <td>2,000</td>
-  </tr>
-  <tr>
-  <td>Miscellaneous</td>
-  <td>Contingency/Unexpected expenses</td>
-  <td>-</td>
-  <td>1,000</td>
-  </tr>
-  </tbody>
-  <tfoot>
-  <tr>
-  <td colspan="3"><strong>Total</strong></td>
-  <td><strong>21,500</strong></td>
-  </tr>
-  </tfoot>
-  </table>
-  </section>
-
-  <section>
-  <h2>Event Itinerary</h2>
-  <p>Here's a detailed schedule for the celebration:</p>
-  <ul>
-  <li><strong>1:00 PM:</strong> Arrival & Welcome: Guests arrive, check in, and enjoy free play.</li>
-  <li><strong>1:15 PM:</strong> Opening Remarks & Group Photo: A warm welcome address followed by a group photo session.</li>
-  <li><strong>1:30 PM:</strong> Meal Session (Lunch): Enjoy a delicious catered meal. Relax, savor the food, and mingle.</li>
-  <li><strong>2:00 PM:</strong> Cake Cutting Ceremony: Gather around for the cake cutting ceremony, sing "Happy Birthday," and enjoy the moment.</li>
-  <li><strong>2:15 PM:</strong> Interactive Games & Activities: Engage in fun-filled games and activities suited for both kids and adults.</li>
-  <li><strong>2:45 PM:</strong> Entertainment Break: Enjoy an additional fun segment such as a mini dance session, face painting, or a treasure hunt.</li>
-  <li><strong>3:00 PM:</strong> Party Favors Distribution: Hand out goodie bags to thank guests for joining in the celebration.</li>
-  <li><strong>3:15 PM:</strong> Closing Remarks: A brief thank-you speech to wrap up the memorable celebration.</li>
-  <li><strong>3:30 PM:</strong> Event Wrap-Up: Informal mingling continues until guests gradually depart.</li>
-  </ul>
-  </section>
-
-  <section>
-  <h2>Party Highlights</h2>
-  <img src="http://googleusercontent.com/generated_image_content/0" alt="Pink Birthday Party Design" class="birthday-image">
-  <div class="party-popper"></div>
-  <p>...and much more!</p>
-  </section>
-  </main>
-
-  <footer>
-  © 2025 Cara's Birthday Celebration. All rights reserved.
-  </footer>
- </body>
- </html>
+ <script src="script.js"></script>
+ <script src="https://kit.fontawesome.com/your_fontawesome_kit.js" crossorigin="anonymous"></script> </body>
+</html>
