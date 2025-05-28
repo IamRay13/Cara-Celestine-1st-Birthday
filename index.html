@@ -1,0 +1,238 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cara's 1st Birthday Celebration</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23FF69B4'%3E%F0%9F%A5%B3%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+  <style>
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffe4e1; /* Light pink background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  color: #333;
+  }
+
+  header {
+  background-color: #ffb6c1; /* Slightly darker pink for header */
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+  width: 100%;
+  }
+
+  main {
+  padding: 2em;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin-bottom: 2em;
+  }
+
+  h1 {
+  color: #ff1493; /* Bright pink for heading */
+  }
+
+  section {
+  margin-bottom: 1.5em;
+  }
+
+  h2 {
+  color: #ff69b4; /* Medium pink for subheading */
+  border-bottom: 2px solid #ff69b4;
+  padding-bottom: 0.5em;
+  }
+
+  ul {
+  list-style: none;
+  padding: 0;
+  }
+
+  li {
+  margin-bottom: 0.5em;
+  }
+
+  .expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  }
+
+  .expense-table th, .expense-table td {
+  border: 1px solid #ff69b4;
+  padding: 0.5em;
+  text-align: left;
+  }
+
+  .expense-table th {
+  background-color: #ffb6c1;
+  color: white;
+  }
+
+  footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #ffb6c1;
+  color: white;
+  width: 100%;
+  }
+
+  /* Party Popper Animation (Simplified - Consider adding a library for more complex animations) */
+  .party-popper {
+  position: relative;
+  width: 50px;
+  height: 70px;
+  margin: 20px auto;
+  }
+
+  .party-popper:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+  animation: confetti 1s infinite;
+  }
+
+  @keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-50px) rotate(360deg); }
+  }
+
+  /* Image */
+  .birthday-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  }
+  </style>
+ </head>
+ <body>
+  <header>
+  <h1>Cara's 1st Birthday Celebration</h1>
+  </header>
+
+  <main>
+  <section>
+  <h2>Invitation</h2>
+  <p>You're Invited to Cara's 1st Birthday Celebration!</p>
+  <p>Join us as we celebrate one whole year of joy, wonder, and precious memories with our daughter, Cara Celestine Miñoza Tariao.</p>
+  <p>Come share in the fun, games, and delightful treats of this special day!</p>
+  <ul>
+  <li><strong>Date:</strong> October 14, 2025</li>
+  <li><strong>Time:</strong> 1:00 PM</li>
+  <li><strong>Venue:</strong> Shakeys Panagdait</li>
+  <li><strong>RSVP:</strong> [Insert Contact Details]</li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>Expense Budget (in PHP) for 30 Pax</h2>
+  <table class="expense-table">
+  <thead>
+  <tr>
+  <th>Item/Service</th>
+  <th>Quantity / Notes</th>
+  <th>Unit Cost (PHP)</th>
+  <th>Total Cost (PHP)</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>Venue Setup</td>
+  <td>Venue fee (no additional charge)</td>
+  <td>0</td>
+  <td>0</td>
+  </tr>
+  <tr>
+  <td>Birthday Cake</td>
+  <td>Custom cake for 30 pax</td>
+  <td>4,000</td>
+  <td>4,000</td>
+  </tr>
+  <tr>
+  <td>Catering (Food)</td>
+  <td>30 guests @ 250 PHP each</td>
+  <td>250</td>
+  <td>7,500</td>
+  </tr>
+  <tr>
+  <td>Beverages</td>
+  <td>30 guests @ 50 PHP each</td>
+  <td>50</td>
+  <td>1,500</td>
+  </tr>
+  <tr>
+  <td>Decorations</td>
+  <td>Balloons, banners, table decor</td>
+  <td>1 lot</td>
+  <td>2,500</td>
+  </tr>
+  <tr>
+  <td>Party Favors</td>
+  <td>Goodie bags for each guest (30 total)</td>
+  <td>100</td>
+  <td>3,000</td>
+  </tr>
+  <tr>
+  <td>Entertainment</td>
+  <td>Games, activities & fun interactive set-ups</td>
+  <td>2,000</td>
+  <td>2,000</td>
+  </tr>
+  <tr>
+  <td>Miscellaneous</td>
+  <td>Contingency/Unexpected expenses</td>
+  <td>-</td>
+  <td>1,000</td>
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+  <td colspan="3"><strong>Total</strong></td>
+  <td><strong>21,500</strong></td>
+  </tr>
+  </tfoot>
+  </table>
+  </section>
+
+  <section>
+  <h2>Event Itinerary</h2>
+  <p>Here's a detailed schedule for the celebration:</p>
+  <ul>
+  <li><strong>1:00 PM:</strong> Arrival & Welcome: Guests arrive, check in, and enjoy free play.</li>
+  <li><strong>1:15 PM:</strong> Opening Remarks & Group Photo: A warm welcome address followed by a group photo session.</li>
+  <li><strong>1:30 PM:</strong> Meal Session (Lunch): Enjoy a delicious catered meal. Relax, savor the food, and mingle.</li>
+  <li><strong>2:00 PM:</strong> Cake Cutting Ceremony: Gather around for the cake cutting ceremony, sing "Happy Birthday," and enjoy the moment.</li>
+  <li><strong>2:15 PM:</strong> Interactive Games & Activities: Engage in fun-filled games and activities suited for both kids and adults.</li>
+  <li><strong>2:45 PM:</strong> Entertainment Break: Enjoy an additional fun segment such as a mini dance session, face painting, or a treasure hunt.</li>
+  <li><strong>3:00 PM:</strong> Party Favors Distribution: Hand out goodie bags to thank guests for joining in the celebration.</li>
+  <li><strong>3:15 PM:</strong> Closing Remarks: A brief thank-you speech to wrap up the memorable celebration.</li>
+  <li><strong>3:30 PM:</strong> Event Wrap-Up: Informal mingling continues until guests gradually depart.</li>
+  </ul>
+  </section>
+
+  <section>
+  <h2>Party Highlights</h2>
+  <img src="http://googleusercontent.com/generated_image_content/0" alt="Pink Birthday Party Design" class="birthday-image">
+  <div class="party-popper"></div>
+  <p>...and much more!</p>
+  </section>
+  </main>
+
+  <footer>
+  © 2025 Cara's Birthday Celebration. All rights reserved.
+  </footer>
+ </body>
+ </html>
