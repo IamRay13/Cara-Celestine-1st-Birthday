@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cara's 1st Birthday Celebration – Cry Babies Theme</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%20fill='%23FFCDEA'%3E%F0%9F%8E%88%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+  <style>
+    /* Import Google Fonts for a playful, youthful look */
+    @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700&display=swap");
+
+    /* Global Reset & Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', sans-serif; /* A friendly, rounded font */
+      color: #333;
+      background: linear-gradient(135deg, #FFCDEA 0%, #ADD8E6 100%); /* Softer, pastel pink and blue */
+      overflow-x: hidden;
+    }
+
+    /* Keyframes for Invitation Pop-Up Animation */
+    @keyframes popUp {
+      0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0.5);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.1);
+      }
+      80% {
+        transform: translateY(10px) scale(0.95);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Header Styles for Cry Babies Theme */
+    header {
+      background: linear-gradient(45deg, #FFB6C1, #AEEEEE); /* Pastel pink and light cyan */
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      border-bottom: 5px dashed #87CEEB; /* Dashed border for a playful touch */
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Pacifico', cursive; /* A more whimsical font for the title */
+      font-size: 3rem; /* Slightly larger for impact */
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 2;
+      color: #FFF; /* White text for contrast */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    header::before,
+    header::after {
+      content: "🍼"; /* Baby bottle icon */
+      font-size: 3rem;
+      opacity: 0.7;
+      position: absolute;
+      top: 1rem;
+      z-index: 1;
+    }
+    header::before { left: 1rem; }
+    header::after { right: 1rem; }
+
+    /* Celebrant Photo – Perfect Circle with a playful border */
+    .celebrant-photo-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .celebrant-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 7px solid #F0F8FF; /* Light blue border */
+      border-radius: 50%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      filter: drop-shadow(0 0 10px #FFD1DC); /* Pink glow effect */
+    }
+
+    /* Main Content Area */
+    main {
+      padding: 1.5rem;
+    }
+    /* Invitation Section with Pop-Up Animation */
+    #invitation {
+      background: #fff;
+      border-radius: 20px; /* More rounded corners */
+      margin-bottom: 1.5rem;
+      padding: 2rem; /* Increased padding */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+      animation: popUp 1.5s ease-out forwards;
+      border: 3px solid #87CEEB; /* Light blue border */
+    }
+    #invitation h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.25rem; /* Larger heading */
+      margin-bottom: 1.5rem;
+      color: #FF69B4; /* Hot pink */
+      border-bottom: 3px dotted #FFC0CB; /* Dotted pink border */
+      padding-bottom: 0.75rem;
+      text-align: center;
+    }
+    #invitation p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    #invitation ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    #invitation ul li {
+      margin: 0.75rem 0;
+      color: #555;
+    }
+    #invitation ul li strong {
+      color: #FF69B4; /* Hot pink for strong text */
+    }
+
+    /* Hidden Expense Budget & Itinerary Sections */
+    #expense-budget,
+    #event-itinerary {
+      display: none;
+      background: #fff;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      border: 3px solid #87CEEB;
+    }
+    #expense-budget h2,
+    #event-itinerary h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.25rem;
+      margin-bottom: 1.5rem;
+      color: #FF69B4;
+      border-bottom: 3px dotted #FFC0CB;
+      padding-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: separate; /* Use separate for rounded borders on cells */
+      border-spacing: 0;
+      margin: 1.5rem 0;
+      border-radius: 15px; /* Rounded corners for the entire table */
+      overflow: hidden; /* Ensures content respects rounded corners */
+    }
+    th, td {
+      border: 1px solid #ADD8E6; /* Light blue border for cells */
+      padding: 1rem 1.25rem; /* Increased padding */
+      text-align: left;
+      font-size: 1rem;
+    }
+    th {
+      background: #FFC0CB; /* Light pink for headers */
+      color: #8B008B; /* Dark magenta for header text */
+      font-weight: 700;
+    }
+    tr:nth-child(even) {
+      background-color: #F8F8FF; /* Lighter background for even rows */
+    }
+    .total {
+      background: #FFB6C1; /* Lighter pink for total row */
+      font-weight: 700;
+      color: #8B008B;
+    }
+
+    /* Toggle Buttons */
+    .button-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    button {
+      background: #87CEEB; /* Sky blue */
+      color: #fff;
+      border: none;
+      padding: 1rem 1.75rem; /* Larger buttons */
+      border-radius: 30px; /* Very rounded buttons */
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin: 0.75rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      background: #FF69B4; /* Hot pink on hover */
+      transform: translateY(-3px); /* Subtle lift effect */
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Footer Styles for Cry Babies Theme */
+    footer {
+      background: linear-gradient(45deg, #FFB6C1, #AEEEEE);
+      text-align: center;
+      padding: 1.5rem;
+      color: #fff;
+      font-size: 1rem;
+      border-top: 5px dashed #87CEEB;
+    }
+
+    /* Floating Balloons Effect - Colors adjusted for Cry Babies theme */
+    .balloons-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 5000;
+    }
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 35px; /* Slightly larger balloons */
+      height: 50px;
+      border-radius: 50%;
+      opacity: 0.8; /* Slightly less opaque */
+      animation: floatUp 8s linear infinite;
+      left: calc(var(--left));
+      animation-delay: var(--delay);
+      box-shadow: inset -5px -5px 10px rgba(0,0,0,0.1); /* Inner shadow for depth */
+    }
+    .balloons-container .balloon:nth-child(1) { background: #FFC0CB; } /* Light Pink */
+    .balloons-container .balloon:nth-child(2) { background: #ADD8E6; } /* Light Blue */
+    .balloons-container .balloon:nth-child(3) { background: #E0BBE4; } /* Lavender */
+    .balloons-container .balloon:nth-child(4) { background: #FFB6C1; } /* Lighter Pink */
+    .balloons-container .balloon:nth-child(5) { background: #B5FFFC; } /* Light Cyan */
+    .balloons-container .balloon:nth-child(6) { background: #FDE2E4; } /* Pale Pink */
+    .balloons-container .balloon:nth-child(7) { background: #C7CEEA; } /* Periwinkle */
+    .balloons-container .balloon:nth-child(8) { background: #FFDDE1; } /* Blossom Pink */
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(0.8); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-1100px) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;"></canvas>
+  
+  <div class="balloons-container">
+    <div class="balloon" style="--left: 20%; --delay: 0s;"></div>
+    <div class="balloon" style="--left: 40%; --delay: 1s;"></div>
+    <div class="balloon" style="--left: 60%; --delay: 2s;"></div>
+    <div class="balloon" style="--left: 80%; --delay: 3s;"></div>
+    <div class="balloon" style="--left: 10%; --delay: 4s;"></div>
+    <div class="balloon" style="--left: 30%; --delay: 2s;"></div>
+    <div class="balloon" style="--left: 50%; --delay: 1.5s;"></div>
+    <div class="balloon" style="--left: 70%; --delay: 3.5s;"></div>
+  </div>
+  
+  <header>
+    <div class="celebrant-photo-container">
+      <img src="https://cdn.jsdelivr.net/gh/IamRay13/Cara-Celestine-1st-Birthday/img/cara.jpg" alt="Cara - The Birthday Girl!" class="celebrant-photo" />
+    </div>
+    <h1>Cara's 1st Birthday Celebration<br />A Cry Babies Party! 😭🍼</h1>
+  </header>
+  
+  <main>
+    <section id="invitation">
+      <h2>You're Invited!</h2>
+      <p><strong>Get ready for some happy tears and lots of fun!</strong></p>
+      <p>
+        Join us as we celebrate one whole year of joy, wonder, and precious memories with our sweet little Cry Baby, 
+        <strong>Cara Celestine Miñoza Tariao</strong>.
+      </p>
+      <p>Come share in the fun, games, and delightful treats of this special day!</p>
+      <ul>
+        <li><strong>Date:</strong> October 14, 2025</li>
+        <li><strong>Time:</strong> 1:00 PM</li>
+        <li><strong>Venue:</strong> Shakeys Panagdait</li>
+        <li><strong>RSVP:</strong> Email me at ramontariao@gmail.com or text me using 09068961930</li>
+      </ul>
+      <p style="text-align: center; margin-top: 1.5rem; font-size: 1.2rem;">Don't forget your favorite Cry Babies character! 💖</p>
+    </section>
+    
+    <section id="expense-budget">
+      <h2>Cry Babies Budget Breakdown (in PHP) - 30 Pax</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item/Service</th>
+            <th>Quantity / Notes</th>
+            <th>Unit Cost (PHP)</th>
+            <th>Total Cost (PHP)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Venue Setup</td>
+            <td>Venue fee (no additional charge)</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Birthday Cake</td>
+            <td>Custom Cry Babies cake for 30 pax</td>
+            <td>4,500</td>
+            <td>4,500</td>
+          </tr>
+          <tr>
+            <td>Catering (Food)</td>
+            <td>30 guests @ 250 PHP each</td>
+            <td>250</td>
+            <td>7,500</td>
+          </tr>
+          <tr>
+            <td>Beverages</td>
+            <td>30 guests @ 50 PHP each</td>
+            <td>50</td>
+            <td>1,500</td>
+          </tr>
+          <tr>
+            <td>Decorations</td>
+            <td>Cry Babies balloons, banners, table decor</td>
+            <td>1 lot</td>
+            <td>3,000</td>
+          </tr>
+          <tr>
+            <td>Party Favors</td>
+            <td>Cry Babies themed goodie bags (30 total)</td>
+            <td>120</td>
+            <td>3,600</td>
+          </tr>
+          <tr>
+            <td>Entertainment</td>
+            <td>Cry Babies games, activities & fun interactive set-ups</td>
+            <td>2,500</td>
+            <td>2,500</td>
+          </tr>
+          <tr>
+            <td>Miscellaneous</td>
+            <td>Contingency/Unexpected expenses</td>
+            <td>-</td>
+            <td>1,000</td>
+          </tr>
+          <tr class="total">
+            <td colspan="3"><strong>Total</strong></td>
+            <td><strong>23,600</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="event-itinerary">
+      <h2>Cry Babies Party Itinerary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1:00 PM</td>
+            <td><strong>Arrival & Welcome:</strong> Guests arrive, check in, and get ready for some Cry Babies fun!</td>
+          </tr>
+          <tr>
+            <td>1:15 PM</td>
+            <td><strong>Opening Remarks & Group Photo:</strong> A warm welcome address followed by a group photo session with our little Cry Baby.</td>
+          </tr>
+          <tr>
+            <td>1:30 PM</td>
+            <td><strong>Meal Session (Lunch):</strong> Enjoy a delicious catered meal – even Cry Babies need to eat!</td>
+          </tr>
+          <tr>
+            <td>2:00 PM</td>
+            <td><strong>Cake Cutting Ceremony:</strong> Gather around for the Cry Babies cake cutting ceremony, sing "Happy Birthday," and make a wish!</td>
+          </tr>
+          <tr>
+            <td>2:15 PM</td>
+            <td><strong>Interactive Games & Activities:</strong> Join in fun-filled Cry Babies themed games and activities for all ages.</td>
+          </tr>
+          <tr>
+            <td>2:45 PM</td>
+            <td><strong>Entertainment Break:</strong> Enjoy additional fun segments like a mini dance party, face painting, or a treasure hunt.</td>
+          </tr>
+          <tr>
+            <td>3:00 PM</td>
+            <td><strong>Party Favors Distribution:</strong> Hand out special Cry Babies goodie bags to thank guests for joining the celebration.</td>
+          </tr>
+          <tr>
+            <td>3:15 PM</td>
+            <td><strong>Closing Remarks:</strong> A brief thank-you speech to wrap up this memorable Cry Babies celebration.</td>
+          </tr>
+          <tr>
+            <td>3:30 PM</td>
+            <td><strong>Event Wrap-Up:</strong> Informal mingling continues until guests gradually depart, hopefully with dry eyes and full hearts!</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <div class="button-container">
+      <button id="toggleBudget">Show Cry Babies Budget</button>
+      <button id="toggleItinerary">Show Cry Babies Itinerary</button>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Cara's Cry Babies Birthday Celebration. All rights reserved. 💖</p>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Trigger confetti effect on page load
+    window.addEventListener("load", function () {
+      const duration = 5000;
+      const animationEnd = Date.now() + duration;
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      const interval = setInterval(function () {
+        const timeLeft = animationEnd - Date.now();
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          return;
+        }
+        const particleCount = 50 * (timeLeft / duration);
+        confetti(Object.assign({}, defaults, {
+          particleCount: particleCount,
+          origin: { x: randomInRange(0.1, 0.9), y: Math.random() - 0.2 }
+        }));
+      }, 250);
+    });
+
+    // Toggle the visibility of hidden sections
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBudgetBtn = document.getElementById("toggleBudget");
+      const toggleItineraryBtn = document.getElementById("toggleItinerary");
+      const expenseSection = document.getElementById("expense-budget");
+      const itinerarySection = document.getElementById("event-itinerary");
+
+      toggleBudgetBtn.addEventListener("click", function () {
+        expenseSection.style.display = expenseSection.style.display === "none" || expenseSection.style.display === "" 
+          ? "block" : "none";
+      });
+
+      toggleItineraryBtn.addEventListener("click", function () {
+        itinerarySection.style.display = itinerarySection.style.display === "none" || itinerarySection.style.display === "" 
+          ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
