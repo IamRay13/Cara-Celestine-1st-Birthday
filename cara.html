@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cara's 1st Birthday Celebration – Cry Babies Theme</title>
+   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23FFCDEA'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E" type="image/svg+xml"> 
+
+  <style>
+    /* Import Google Font */
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+    /* Global Reset & Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+      overflow-x: hidden;
+    }
+
+    /* Keyframes for Invitation Pop-Up Animation */
+    @keyframes popUp {
+      0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0.5);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.1);
+      }
+      80% {
+        transform: translateY(10px) scale(0.95);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Header Styles updated to Cry Babies Theme */
+    header {
+      background: linear-gradient(45deg, #FFB6C1, #B0E0E6);
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 2;
+    }
+    header::before,
+    header::after {
+      content: "";
+      font-size: 3rem;
+      opacity: 0.7;
+      position: absolute;
+      top: 1rem;
+      z-index: 1;
+    }
+    header::before { left: 1rem; }
+    header::after { right: 1rem; }
+
+    /* Celebrant Photo – Perfect Circle */
+    .celebrant-photo-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .celebrant-photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main Content Area */
+    main {
+      padding: 1.5rem;
+    }
+    /* Invitation Section with Pop-Up Animation */
+    #invitation {
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: popUp 1.5s ease-out forwards;
+    }
+    #invitation h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #FF6F61;
+      border-bottom: 2px solid #FF6F61;
+      padding-bottom: 0.5rem;
+    }
+    #invitation ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+    #invitation ul li {
+      margin: 0.5rem 0;
+    }
+
+    /* Hidden Expense Budget & Itinerary Sections */
+    #expense-budget,
+    #event-itinerary {
+      display: none;
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    #expense-budget h2,
+    #event-itinerary h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #FF6F61;
+      border-bottom: 2px solid #FF6F61;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    th {
+      background: #FFE5D9;
+      color: #FF6F61;
+    }
+    .total {
+      background: #FFE5D9;
+      font-weight: 600;
+    }
+
+    /* Toggle Buttons */
+    .button-container {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    button {
+      background: #FF6F61;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 0.5rem;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #E85A4F;
+    }
+
+    /* Footer Styles updated to Cry Babies Theme */
+    footer {
+      background: linear-gradient(45deg, #FFB6C1, #B0E0E6);
+      text-align: center;
+      padding: 1rem;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    /* Floating Balloons Effect */
+    .balloons-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 5000;
+    }
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 30px;
+      height: 40px;
+      border-radius: 50%;
+      opacity: 0.9;
+      animation: floatUp 8s linear infinite;
+      left: calc(var(--left));
+      animation-delay: var(--delay);
+    }
+    .balloons-container .balloon:nth-child(1) { background: #F94144; }
+    .balloons-container .balloon:nth-child(2) { background: #F3722C; }
+    .balloons-container .balloon:nth-child(3) { background: #F8961E; }
+    .balloons-container .balloon:nth-child(4) { background: #90BE6D; }
+    .balloons-container .balloon:nth-child(5) { background: #43AA8B; }
+    .balloons-container .balloon:nth-child(6) { background: #577590; }
+    .balloons-container .balloon:nth-child(7) { background: #277DA1; }
+    .balloons-container .balloon:nth-child(8) { background: #4D908E; }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(0.8); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-1100px) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Confetti Canvas for Party Poppers Effect -->
+  <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;"></canvas>
+  
+  <!-- Floating Balloons -->
+  <div class="balloons-container">
+    <div class="balloon" style="--left: 20%; --delay: 0s;"></div>
+    <div class="balloon" style="--left: 40%; --delay: 1s;"></div>
+    <div class="balloon" style="--left: 60%; --delay: 2s;"></div>
+    <div class="balloon" style="--left: 80%; --delay: 3s;"></div>
+    <div class="balloon" style="--left: 10%; --delay: 4s;"></div>
+    <div class="balloon" style="--left: 30%; --delay: 2s;"></div>
+    <div class="balloon" style="--left: 50%; --delay: 1.5s;"></div>
+    <div class="balloon" style="--left: 70%; --delay: 3.5s;"></div>
+  </div>
+  
+  <header>
+    <div class="celebrant-photo-container">
+      <img src="https://cdn.jsdelivr.net/gh/IamRay13/Cara-Celestine-1st-Birthday/img/cara.jpg" alt="Cara - The Birthday Girl!" class="celebrant-photo" />
+    </div>
+    <h1>Cara's 1st Birthday Celebration<br /></h1>
+  </header>
+  
+  <main>
+    <!-- Invitation Section with Pop-Up Animation -->
+    <section id="invitation">
+      <h2>Invitation</h2>
+      <p><strong>You're Invited to Cara's 1st Birthday Celebration!</strong></p>
+      <p>
+        Join us as we celebrate one whole year of joy, wonder, and precious memories with our daughter, 
+        <strong>Cara Celestine Miñoza Tariao</strong>.
+      </p>
+      <p>Come share in the fun, games, and delightful treats of this special day!</p>
+      <ul>
+        <li><strong>Date:</strong> October 14, 2025</li>
+        <li><strong>Time:</strong> 1:00 PM</li>
+        <li><strong>Venue:</strong> Shakeys Panagdait</li>
+        <li><strong>RSVP:</strong> Email me at ramontariao@gmail.com or text me using 09068961930</li>
+      </ul>
+    </section>
+    
+    <!-- Expense Budget Section (Hidden by Default) -->
+    <section id="expense-budget">
+      <h2>Expense Budget (in PHP) - 30 Pax</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item/Service</th>
+            <th>Quantity / Notes</th>
+            <th>Unit Cost (PHP)</th>
+            <th>Total Cost (PHP)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Venue Setup</td>
+            <td>Venue fee (no additional charge)</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Birthday Cake</td>
+            <td>Custom cake for 30 pax</td>
+            <td>4,000</td>
+            <td>4,000</td>
+          </tr>
+          <tr>
+            <td>Catering (Food)</td>
+            <td>30 guests @ 250 PHP each</td>
+            <td>250</td>
+            <td>7,500</td>
+          </tr>
+          <tr>
+            <td>Beverages</td>
+            <td>30 guests @ 50 PHP each</td>
+            <td>50</td>
+            <td>1,500</td>
+          </tr>
+          <tr>
+            <td>Decorations</td>
+            <td>Balloons, banners, table decor</td>
+            <td>1 lot</td>
+            <td>2,500</td>
+          </tr>
+          <tr>
+            <td>Party Favors</td>
+            <td>Goodie bags for each guest (30 total)</td>
+            <td>100</td>
+            <td>3,000</td>
+          </tr>
+          <tr>
+            <td>Entertainment</td>
+            <td>Games, activities & fun interactive set-ups</td>
+            <td>2,000</td>
+            <td>2,000</td>
+          </tr>
+          <tr>
+            <td>Miscellaneous</td>
+            <td>Contingency/Unexpected expenses</td>
+            <td>-</td>
+            <td>1,000</td>
+          </tr>
+          <tr class="total">
+            <td colspan="3"><strong>Total</strong></td>
+            <td><strong>21,500</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Event Itinerary Section (Hidden by Default) -->
+    <section id="event-itinerary">
+      <h2>Event Itinerary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1:00 PM</td>
+            <td><strong>Arrival & Welcome:</strong> Guests arrive, check in, and enjoy free play.</td>
+          </tr>
+          <tr>
+            <td>1:15 PM</td>
+            <td><strong>Opening Remarks & Group Photo:</strong> A warm welcome address followed by a group photo session (captured by you).</td>
+          </tr>
+          <tr>
+            <td>1:30 PM</td>
+            <td><strong>Meal Session (Lunch):</strong> Enjoy a delicious catered meal. Relax, savor the food, and mingle.</td>
+          </tr>
+          <tr>
+            <td>2:00 PM</td>
+            <td><strong>Cake Cutting Ceremony:</strong> Gather around for the cake cutting ceremony, sing "Happy Birthday," and savor the moment.</td>
+          </tr>
+          <tr>
+            <td>2:15 PM</td>
+            <td><strong>Interactive Games & Activities:</strong> Engage in fun-filled games and activities suited for both kids and adults.</td>
+          </tr>
+          <tr>
+            <td>2:45 PM</td>
+            <td><strong>Entertainment Break:</strong> Enjoy additional fun segments such as a mini dance session, face painting, or a treasure hunt.</td>
+          </tr>
+          <tr>
+            <td>3:00 PM</td>
+            <td><strong>Party Favors Distribution:</strong> Hand out goodie bags to thank guests for joining the celebration.</td>
+          </tr>
+          <tr>
+            <td>3:15 PM</td>
+            <td><strong>Closing Remarks:</strong> A brief thank-you speech to wrap up this memorable celebration.</td>
+          </tr>
+          <tr>
+            <td>3:30 PM</td>
+            <td><strong>Event Wrap-Up:</strong> Informal mingling continues until guests gradually depart.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Toggle Buttons for Hidden Sections -->
+    <div class="button-container">
+      <button id="toggleBudget">Toggle Expense Budget</button>
+      <button id="toggleItinerary">Toggle Event Itinerary</button>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Cara's Birthday Celebration. All rights reserved.</p>
+  </footer>
+  
+  <!-- Confetti Library for Party Poppers Effect -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Trigger confetti effect on page load
+    window.addEventListener("load", function () {
+      const duration = 5000;
+      const animationEnd = Date.now() + duration;
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      const interval = setInterval(function () {
+        const timeLeft = animationEnd - Date.now();
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          return;
+        }
+        const particleCount = 50 * (timeLeft / duration);
+        confetti(Object.assign({}, defaults, {
+          particleCount: particleCount,
+          origin: { x: randomInRange(0.1, 0.9), y: Math.random() - 0.2 }
+        }));
+      }, 250);
+    });
+
+    // Toggle the visibility of hidden sections
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBudgetBtn = document.getElementById("toggleBudget");
+      const toggleItineraryBtn = document.getElementById("toggleItinerary");
+      const expenseSection = document.getElementById("expense-budget");
+      const itinerarySection = document.getElementById("event-itinerary");
+
+      toggleBudgetBtn.addEventListener("click", function () {
+        expenseSection.style.display = expenseSection.style.display === "none" || expenseSection.style.display === "" 
+          ? "block" : "none";
+      });
+
+      toggleItineraryBtn.addEventListener("click", function () {
+        itinerarySection.style.display = itinerarySection.style.display === "none" || itinerarySection.style.display === "" 
+          ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
